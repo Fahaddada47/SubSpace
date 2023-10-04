@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test_assign/model/bookmark_controller.dart';
 import 'package:test_assign/ui/main_bottom_nav_screen.dart';
 
 class BlogExplorer extends StatefulWidget {
@@ -14,6 +15,10 @@ class _BlogExplorerState extends State<BlogExplorer> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       home: const MainBottomNavScreen(),
+      initialBinding: BindingsBuilder(() {
+        Get.put(BookmarkController());
+      }),
+
       theme: ThemeData(
         primaryColor: const Color(0xFF07ADAE),
         progressIndicatorTheme: const ProgressIndicatorThemeData(

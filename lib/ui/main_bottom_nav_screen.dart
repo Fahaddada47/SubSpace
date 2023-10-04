@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_assign/ui/HomeScreen.dart';
 import 'package:test_assign/ui/bookmarks_list.dart';
-import 'package:test_assign/ui/category.dart';
+import 'package:test_assign/ui/category_list.dart';
 import 'package:test_assign/ui/setting.dart';
 
 class MainBottomNavScreen extends StatefulWidget {
@@ -15,8 +15,8 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
   int _selectedIndex = 0;
   final List<Widget> _screen = [
     HomeScreen(),
-    const Category(),
-    const BookmarksList(),
+    const CategoryListScreen(),
+     BookmarkPage(),
     const Setting(),
   ];
 

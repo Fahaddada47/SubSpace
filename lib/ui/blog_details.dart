@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:test_assign/model/blogs.dart';
+import 'package:test_assign/model/bookmark_controller.dart';
 
 class BlogDetailsPage extends StatelessWidget {
+  final BookmarkController bookmarkController = Get.find();
+
   final Blog blog;
 
   BlogDetailsPage({required this.blog});
@@ -37,9 +41,17 @@ class BlogDetailsPage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.bookmark),
+      floatingActionButton: Obx(
+            () => FloatingActionButton(
+          onPressed: () {
+            bookmarkController.toggleBookmark(blog);
+          },
+          child: Icon(
+            bookmarkController.isBookmarked.value
+                ? Icons.bookmark
+                : Icons.bookmark_border,
+          ),
+        ),
       ),
     );
   }
