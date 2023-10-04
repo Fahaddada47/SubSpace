@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:search_page/search_page.dart';
 import 'package:test_assign/model/blogs.dart';
 import 'package:test_assign/services/network_caller.dart';
+import 'package:test_assign/ui/bookmarks_list.dart';
 import 'package:test_assign/ui/message_screen.dart';
 import 'package:test_assign/widget/blog_list.dart';
 import 'package:test_assign/widget/search.dart';
@@ -61,7 +62,9 @@ class HomeScreen extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.bookmark),
               title: const Text('Bookmarks'),
-              onTap: () {},
+              onTap: () {
+                Get.to(BookmarkPage());
+              },
             ),
             ListTile(
               leading: const Icon(Icons.settings),
