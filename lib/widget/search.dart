@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_assign/model/blogs.dart';
 import 'package:test_assign/ui/HomeScreen.dart';
+import 'package:test_assign/ui/main_bottom_nav_screen.dart';
 
 class BlogSearchDelegate extends SearchDelegate<Blog> {
   final List<Blog> blogs;
@@ -24,7 +25,7 @@ class BlogSearchDelegate extends SearchDelegate<Blog> {
   Widget buildLeading(BuildContext context) {
     return IconButton(
       onPressed: () {
-        Get.offAll(HomeScreen());
+        Get.offAll(MainBottomNavScreen());
       },
       icon: Icon(Icons.arrow_back),
     );
