@@ -39,7 +39,6 @@ class HomeScreen extends StatelessWidget {
               },
               icon: Icon(Icons.search),
             ),
-
           ],
         ),
       ),

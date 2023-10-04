@@ -20,21 +20,16 @@ class _ContactScreenState extends State<ContactScreen> {
           child: Column(
             children: [
               TextFormField(
-                decoration: const InputDecoration(
-                    hintText: 'First Name'
-                ),
+                decoration: const InputDecoration(hintText: 'First Name'),
               ),
               const SizedBox(
                 height: 16,
               ),
-
               const SizedBox(
                 height: 16,
               ),
               TextFormField(
-                decoration: const InputDecoration(
-                    hintText: 'Last Name'
-                ),
+                decoration: const InputDecoration(hintText: 'Last Name'),
               ),
               const SizedBox(
                 height: 16,
@@ -45,9 +40,9 @@ class _ContactScreenState extends State<ContactScreen> {
               TextFormField(
                 maxLines: 6,
                 decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(horizontal: 16,vertical: 16),
-                    hintText: 'Write Review'
-                ),
+                    contentPadding:
+                        EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                    hintText: 'Write Review'),
               ),
               const SizedBox(
                 height: 16,
@@ -59,7 +54,6 @@ class _ContactScreenState extends State<ContactScreen> {
               const SizedBox(
                 height: 16,
               ),
-
             ],
           ),
         ),

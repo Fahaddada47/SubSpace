@@ -16,8 +16,8 @@ class BlogListWidget extends StatelessWidget {
       itemBuilder: (context, index) {
         final blog = blogs[index];
         return InkWell(
-          onTap: (){
-          Get.to(BlogDetailsPage(blog: blog));
+          onTap: () {
+            Get.to(BlogDetailsPage(blog: blog));
           },
           child: Container(
             decoration: BoxDecoration(
@@ -28,7 +28,7 @@ class BlogListWidget extends StatelessWidget {
                   color: Colors.grey.withOpacity(0.5), // Shadow color
                   spreadRadius: 2,
                   blurRadius: 4,
-                  offset: Offset(0, 2), // Shadow offset
+                  offset: const Offset(0, 2), // Shadow offset
                 ),
               ],
             ),
@@ -37,7 +37,10 @@ class BlogListWidget extends StatelessWidget {
               title: Column(
                 children: [
                   Image.network(blog.imageUrl),
-                  Text('Title: ${blog.title}'),
+                  Text('Title: ${blog.title}',style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),),
                 ],
               ),
             ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_assign/model/blogs.dart';
+import 'package:test_assign/ui/HomeScreen.dart';
 
 class BlogSearchDelegate extends SearchDelegate<Blog> {
   final List<Blog> blogs;
@@ -9,7 +10,6 @@ class BlogSearchDelegate extends SearchDelegate<Blog> {
 
   @override
   List<Widget> buildActions(BuildContext context) {
-
     return [
       IconButton(
         onPressed: () {
@@ -22,10 +22,9 @@ class BlogSearchDelegate extends SearchDelegate<Blog> {
 
   @override
   Widget buildLeading(BuildContext context) {
-
     return IconButton(
       onPressed: () {
-        Get.off;
+        Get.offAll(HomeScreen());
       },
       icon: Icon(Icons.arrow_back),
     );
@@ -33,7 +32,6 @@ class BlogSearchDelegate extends SearchDelegate<Blog> {
 
   @override
   Widget buildResults(BuildContext context) {
-
     final List<Blog> results = blogs.where((blog) {
       return blog.title.toLowerCase().contains(query.toLowerCase());
     }).toList();
@@ -54,7 +52,6 @@ class BlogSearchDelegate extends SearchDelegate<Blog> {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-
     final List<Blog> suggestions = blogs.where((blog) {
       return blog.title.toLowerCase().contains(query.toLowerCase());
     }).toList();
